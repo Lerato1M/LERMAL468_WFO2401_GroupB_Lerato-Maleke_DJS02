@@ -8,7 +8,7 @@ form.addEventListener("submit", (event) => {
   
   //Validation when values are missing
   if (!dividend || !divider) {
-    result.innerText = "Division not performed. Both values are required in inputs. Try again";
+    result.innerText = "Division not performed. Both values are required in inputs. Please try again";
     return;
   }
   
@@ -17,7 +17,7 @@ form.addEventListener("submit", (event) => {
 
   //Providing anything that is not a number should crash the program
   if (isNaN(dividend) || isNaN(divider)) {
-    document.body.innerHTML = "Something critical went wrong. Please reload the page";
+    document.body.innerHTML = "Something critical went wrong. Please reload the page.";
     console.error("Invalid input provided");
     return;
   }
@@ -33,7 +33,7 @@ form.addEventListener("submit", (event) => {
 
   // An invalid division should log an error in the console
   if (parsedDivider === 0) {
-    result.innerText = "Division not performed. Invalid number provided. Try again";
+    result.innerText = "Division not performed. Invalid number provided. Please try again";
     console.error("Invalid division by zero");
     return;
   }
